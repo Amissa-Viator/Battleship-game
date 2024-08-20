@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="yourgamefield" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="791.0" style="-fx-background-color: #F0FFFF;" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefiles.ArrangementController">
+   <children>
+      <Label fx:id="yourFieldLabel" layoutX="497.0" layoutY="35.0" text="YOUR FIELD" textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="selectedLabel" layoutX="35.0" layoutY="26.0" prefHeight="37.0" prefWidth="288.0" text="Select ship and place it on the field" textFill="#19196e">
+         <font>
+            <Font name="Bookman Old Style Bold" size="15.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="yourfield" gridLinesVisible="true" layoutX="396.0" layoutY="77.0" style="-fx-background-color: #AED6F1;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="ShipFourUnits" layoutX="66.0" layoutY="77.0" mnemonicParsing="false" onAction="#SelectedFourUnitsShip" prefHeight="26.0" prefWidth="214.0" style="-fx-background-color: #F0FFFF; -fx-border-color: #00008B;" text="Ship of 4 units" textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ShipThreeUnits" layoutX="66.0" layoutY="114.0" mnemonicParsing="false" onAction="#SelectedThreeUnitsShip" prefHeight="26.0" prefWidth="214.0" style="-fx-background-color: #F0FFFF; -fx-border-color: #00008B;" text="Ship of 3 units" textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ShipTwoUnits" layoutX="66.0" layoutY="151.0" mnemonicParsing="false" onAction="#SelectedTwoUnitsShip" prefWidth="214.0" style="-fx-background-color: #F0FFFF; -fx-border-color: #00008B;" text="Ship of 2 units" textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ShipSingleUnit" layoutX="66.0" layoutY="188.0" mnemonicParsing="false" onAction="#SelectedOneUnitShip" prefWidth="214.0" style="-fx-background-color: #F0FFFF; -fx-border-color: #00008B;" text="Ship of single unit" textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="RotateBtn" layoutX="67.0" layoutY="292.0" mnemonicParsing="false" onAction="#RotateShipPosition" prefWidth="214.0" style="-fx-background-color: #F0FFFF; -fx-border-color: #00008B;" text="Rotate" textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="selectedUnitLabel" layoutX="67.0" layoutY="244.0" text="Selected unit: " textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="StartBtn" layoutX="67.0" layoutY="330.0" mnemonicParsing="false" onAction="#ConnectWithOpponentToGame" prefWidth="214.0" style="-fx-background-color: #F0FFFF; -fx-border-color: #00008B;" text="Start" textFill="MIDNIGHTBLUE">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
